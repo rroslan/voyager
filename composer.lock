@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "63b3b207a897684f804d001368c908f8",
+    "content-hash": "7eaeb8741762ab05c75b81efd91e562b",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -67,6 +67,70 @@
                 "widgets"
             ],
             "time": "2018-04-15T19:59:08+00:00"
+        },
+        {
+            "name": "bread-templates",
+            "version": "1.0.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/launcher-host/bread-templates.git",
+                "reference": "1.0.13"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.0",
+                "phpunit/phpunit": "^6.2|^5.6"
+            },
+            "type": "library",
+            "extra": {
+                "hook": {
+                    "providers": [
+                        "Launcher\\BreadTemplates\\BreadTemplatesServiceProvider"
+                    ],
+                    "aliases": {
+                        "Launcher\\BreadTemplates": "Launcher\\BreadTemplates\\BreadTemplatesFacade"
+                    },
+                    "migrations": [
+                        "publishable/database/migrations"
+                    ],
+                    "seeders": [
+                        "publishable/database/seeds/BreadTemplatesDatabaseSeeder.php"
+                    ],
+                    "unseeders": [
+                        "publishable/database/unseeds/BreadTemplatesDatabaseUnseeder.php"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Launcher\\BreadTemplates\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Launcher\\BreadTemplates\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://larapack.io/downloads",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bruno Torrinha",
+                    "email": "bruno@torrinha.com"
+                }
+            ],
+            "description": "Templating BREAD Views",
+            "keywords": [
+                "blade",
+                "hooks",
+                "laravel",
+                "launcher",
+                "templates",
+                "views",
+                "voyager"
+            ],
+            "time": "2018-11-29T09:11:00+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -3930,6 +3994,62 @@
                 "environment"
             ],
             "time": "2018-07-29T20:33:41+00:00"
+        },
+        {
+            "name": "voyager-polls",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thedevdojo/voyager-polls.git",
+                "reference": "v1.0.2"
+            },
+            "require": {
+                "larapack/hooks": "~1.0"
+            },
+            "type": "library",
+            "extra": {
+                "hook": {
+                    "providers": [
+                        "VoyagerPolls\\PollsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VoyagerPolls\\": "src/"
+                }
+            },
+            "notification-url": "https://larapack.io/downloads",
+            "description": "This is my first hook.",
+            "time": "2018-11-29T02:11:09+00:00"
+        },
+        {
+            "name": "voyager-themes",
+            "version": "0.15",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thedevdojo/voyager-themes.git",
+                "reference": "0.15"
+            },
+            "require": {
+                "larapack/hooks": "~1.0"
+            },
+            "type": "library",
+            "extra": {
+                "hook": {
+                    "providers": [
+                        "VoyagerThemes\\VoyagerThemesServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VoyagerThemes\\": "src/"
+                }
+            },
+            "notification-url": "https://larapack.io/downloads",
+            "description": "This hook will add support for Voyager front-end themes",
+            "time": "2018-11-29T14:11:36+00:00"
         }
     ],
     "packages-dev": [

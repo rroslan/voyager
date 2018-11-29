@@ -174,6 +174,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Larapack\Hooks\HooksServiceProvider::class,
+        Larapack\VoyagerHooks\VoyagerHooksServiceProvider::class,
 
     ],
 
